@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Solo para desarrollo. Evita que el navegador cachee archivos. -->
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+    
+    <title>En vivo en ARG</title>
+</head>
+<body>
+    <div class="main-container">
+        <header id="idHeader"></header>
+        <main>
+            <section id="sec-acerca">
+                <article class="text-gen">
+                    <h1>NUESTROS VISITANTES DEJAN SUS OPINIONES</h1>
+                    <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>NOMBRE</th>
+                                    <th>COMENTARIO</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data">
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer id="idFooter"></footer>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>    
+</body>
+</html>
