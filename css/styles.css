@@ -10,58 +10,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/*.main-container {
-    display: grid;
-    grid-template-areas:
-        /*4 columnas y 3 filas*/
-        /*'header header header header'
-        'main main main main'
-        'banda-1 banda-2 banda-3 banda-4'
-        'footer footer footer footer';
-    grid-gap: 10px;
-    background-color:  #f1f1f1;
-    padding: 10px;
-}
-
-.banda-1 {grid-area: banda-1;}
-
-.banda-2 {grid-area: banda-2;}
-
-.banda-3 {grid-area: banda-3;}
-
-.banda-4 {grid-area: banda-4;}*/
-
-/*
-#main-index {
-    grid-area: main;
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    /*justify-content: flex-start;
-    align-content: center;
-}
-
 #main-contacto {
     grid-area: main;
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
     /*justify-content: center;
-    align-content: center;
+    align-content: center;*/
 }
 
-section {
-    width: 50%;
-    background-color: lightgray;
-    border: 2px solid gray;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-}
-
-*/
 /* HEADER */
+
 header{
     text-align: center;
     background-color: rgb(44, 1, 1);
@@ -116,11 +75,49 @@ footer i {
         padding: 10px;
     }
 
-    .secciones{
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        background-color: rgb(212, 23, 23);
+        padding: 10px;        
+        width: 95%;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .secciones article{
+        grid-column: 1/3;
+    }
+
+    section article{
+        background-color: rgba(0, 0, 0, 0.87);
+        padding: 30px;
+        margin-top: 5px;
+    }
+
+
+    .banda:hover{
+        transform: scale(1.05,1.05);
+        /* transition-property: scale(2,0.95); */
+        transition-duration: 100ms;
+        transition-timing-function: ease;
+
+    }
+
+    .banda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .secciones{
         display: flex;        
         flex-direction: column;
         background-color: rgb(212, 23, 23);
-    }
+    } */
 
     .slider, .slider1, .slider2, .slider3{
         display: grid;
@@ -214,6 +211,9 @@ footer i {
     }
 
     section{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
         background-color: rgb(212, 23, 23);
         padding: 10px;
         width: 95%;
@@ -222,11 +222,27 @@ footer i {
         margin-bottom: 5px;
         border-radius: 5px;
     }
+
+    /* section{
+        background-color: rgb(212, 23, 23);
+        padding: 10px;        
+        width: 95%;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    } */
     
     section article{
         background-color: rgba(0, 0, 0, 0.87);
         padding: 30px;
         margin-top: 5px;
+    }
+
+    .banda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .text-gen {
@@ -296,25 +312,33 @@ footer i {
 }
 
 @media screen and (max-width: 450px) {
-
-    main{
-        text-align: center;
-        display: flex;
-        flex-flow: column;
-    }
-
+    
     section{
-        background-color: rgba(0, 0, 0, 0.87);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        background-color: rgb(212, 23, 23);
+        padding: 10px;        
         width: 95%;
         margin: auto;
         margin-top: 5px;
         margin-bottom: 5px;
         border-radius: 5px;
     }
-    
+
     section article{
+        background-color: rgba(0, 0, 0, 0.918);
         padding: 3px;
-        margin-top: 5px;
+        margin: auto;
+        /* margin: 5px 0; */
+        width: 95%;
+        border-radius: 10px;   
+    }
+
+    .banda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .text-gen {
