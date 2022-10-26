@@ -90,10 +90,11 @@ document.getElementById("idHeader").innerHTML = `
 <nav>
     <a href="index.html">Home</a>
     <a href="bandas.html">Bandas</a>
-    <a href="acerca de.html">Acerca de</a>
+    <a href="acerca de.html">Opiniones</a>
     <a href="contacto.html">Contacto</a>
 </nav>
 `;
+
 /***********************************************************
 ************************** FOOTER **************************
 ***********************************************************/
@@ -113,129 +114,3 @@ document.getElementById("idFooter").innerHTML = `
     </div>
     <a href="https://www.flaticon.com/free-icons/music" title="music icons">Music icons created by Freepik - Flaticon</a>
 `;
-
-/***********************************************************
-************************** CARRUSEL **************************
-***********************************************************/
-
-(function(){
-    const sliders = [...document.querySelectorAll('.slider-body')];
-
-    const arrowNext = document.querySelector('#next');
-    const arrowBefore = document.querySelector('#before');
-    let value;
-
-    arrowNext.addEventListener('click', ()=>changePosition(1));
-    arrowBefore.addEventListener('click', ()=>changePosition(-1));
-
-    function changePosition(change){        
-
-    const currentElement=Number(document.querySelector('.slider-body-show').dataset.id);
-
-    value=currentElement;
-    value+=change;
-
-    if(value===0 || value==sliders.length+1){
-        value=value===0 ? sliders.length :1;
-    }
-
-    sliders[value-1].classList.toggle('slider-body-show');
-    }
-})();
-
-(function(){
-    const sliders = [...document.querySelectorAll('.slider-body1')];
-
-    const arrowNext = document.querySelector('#next1');
-    const arrowBefore = document.querySelector('#before1');
-    let value;
-
-    arrowNext.addEventListener('click', ()=>changePosition(1));
-    arrowBefore.addEventListener('click', ()=>changePosition(-1));
-
-    function changePosition(change){        
-
-    const currentElement=Number(document.querySelector('.slider-body-show1').dataset.id);
-
-    value=currentElement;
-    value+=change;
-
-    if(value===0 || value==sliders.length+1){
-        value=value===0 ? sliders.length :1;
-    }
-
-    sliders[value-1].classList.toggle('slider-body-show1');
-    }
-})();
-
-(function(){
-    const sliders = [...document.querySelectorAll('.slider-body2')];
-
-    const arrowNext = document.querySelector('#next2');
-    const arrowBefore = document.querySelector('#before2');
-    let value;
-
-    arrowNext.addEventListener('click', ()=>changePosition(1));
-    arrowBefore.addEventListener('click', ()=>changePosition(-1));
-
-    function changePosition(change){        
-
-    const currentElement=Number(document.querySelector('.slider-body-show2').dataset.id);
-
-    value=currentElement;
-    value+=change;
-
-    if(value===0 || value==sliders.length+1){
-        value=value===0 ? sliders.length :1;
-    }
-
-    sliders[value-1].classList.toggle('slider-body-show2');
-    }
-})();
-
-(function(){
-    const sliders = [...document.querySelectorAll('.slider-body3')];
-
-    const arrowNext = document.querySelector('#next3');
-    const arrowBefore = document.querySelector('#before3');
-    let value;
-
-    arrowNext.addEventListener('click', ()=>changePosition(1));
-    arrowBefore.addEventListener('click', ()=>changePosition(-1));
-
-    function changePosition(change){        
-
-    const currentElement=Number(document.querySelector('.slider-body-show3').dataset.id);
-
-    value=currentElement;
-    value+=change;
-
-    if(value===0 || value==sliders.length+1){
-        value=value===0 ? sliders.length :1;
-    }
-
-    sliders[value-1].classList.toggle('slider-body-show3');
-    }
-})();
-
-let url = 'https://jsonplaceholder.typicode.com/comments'
-fetch(url)
-    .then(response => response.json())
-    .then(data => mostrarData(data))
-    .catch(error => console.log("Ocurrió un error", error))
-
-const mostrarData = (data) => {
-    console.log(data)
-    let comment = ''
-    for (let i = 0; i < 30; i++) {
-        // body = body + ...
-        comment += `<tr> 
-            <td>${data[i].name}</td>
-            <td>${data[i].body}</td>
-            </tr>`
-    }
-
-    document.getElementById("data").innerHTML = comment
-}
-
-
